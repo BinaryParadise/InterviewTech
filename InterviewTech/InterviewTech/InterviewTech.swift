@@ -11,6 +11,7 @@ class InterviewTech: NSObject {
         CanaryManager.shared.baseURL = "http://47.96.176.109"
         CanaryManager.shared.appSecret = "82e439d7968b7c366e24a41d7f53f47d"
         CanaryManager.shared.deviceId = "B65A818A-F4B4-4DC3-AE5A-3C7BA871BD8F"
+        DDTTYLogger.sharedInstance?.logFormatter = LogFormat()
         DDLog.add(DDTTYLogger.sharedInstance!)
         DDLog.add(CanaryTTYLogger())
         CanaryManager.shared.startLogger(domain: nil) {
@@ -20,13 +21,22 @@ class InterviewTech: NSObject {
     }
     
     @objc func run() {
-        ThreadTech.runBatch()
+        //ThreadTech.runBatch()
+        ThreadTech.runTest()
         NotificationCenter.default.removeObserver(self, name: .init(rawValue: DeviceRegistertedNotificationKey), object: nil)
     }
     
     func waitForExit() {
         DDLogInfo("Hello,World!")
         CFRunLoopRun()
+    }
+}
+
+class LogFormat: NSObject, DDLogFormatter {
+    func format(message logMessage: DDLogMessage) -> String? {
+        let fmt = DateFormatter()
+        fmt.dateFormat = "MM-dd HH:mm:ss.SSS"
+        return "\(fmt.string(from: logMessage.timestamp)) \(#function)+\(#line) \(logMessage.message)"
     }
 }
 

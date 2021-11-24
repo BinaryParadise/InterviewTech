@@ -47,4 +47,12 @@ public class ThreadTech {
             GCD.QueueTech.exec(queue: queue, async: async)
         }
     }
+    
+    public class func runGroup() {
+        GCD.GroupTech.exec()
+    }
+    
+    public class func runTest() {
+        NSOperationTech().exec()
+    }
 }
