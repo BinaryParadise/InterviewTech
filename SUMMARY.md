@@ -13,11 +13,15 @@
 * [WKWebView](advanced/WKWebView.md)
 * [JavaScriptCore](javascriptcore.md)
 
-## 效率<a href="efficient" id="efficient"></a>
+## 性能<a href="performance" id="performance"></a>
+
+* [卡顿监控](performance/caton.md)
+
+## 效率提升<a href="efficient" id="efficient"></a>
 
 * [Reveal（UI调试神器）](https://revealapp.com)
 
 ## TODO
 
-* 卡顿、流量监控
+* 流量监控
 
