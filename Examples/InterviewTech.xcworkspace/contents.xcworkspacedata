@@ -8,6 +8,9 @@
       location = "group:InterviewTech/InterviewTech.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:InterviewTech/../InterviewUI/InterviewUI.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:ThreadTech">
    </FileRef>
 </Workspace>
