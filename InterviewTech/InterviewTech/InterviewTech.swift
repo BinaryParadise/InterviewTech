@@ -2,6 +2,7 @@ import Core
 import CocoaLumberjackSwift
 import CoreFoundation
 import ThreadTech
+import AlgorithmTech
 import Proto
 
 class InterviewTech: NSObject {
@@ -22,7 +23,7 @@ class InterviewTech: NSObject {
     
     @objc func run() {
         //ThreadTech.runBatch()
-        ThreadTech.runTest()
+        AlgorithmTech.shared.run()
         NotificationCenter.default.removeObserver(self, name: .init(rawValue: DeviceRegistertedNotificationKey), object: nil)
     }
     

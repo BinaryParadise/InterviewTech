@@ -12,6 +12,7 @@
 		C962265627438F2A00D445C3 /* CocoaLumberjackSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C962265527438F2A00D445C3 /* CocoaLumberjackSwift */; };
 		C9622659274390A500D445C3 /* ThreadTech in Frameworks */ = {isa = PBXBuildFile; productRef = C9622658274390A500D445C3 /* ThreadTech */; };
 		C962265D274395BA00D445C3 /* macOS in Frameworks */ = {isa = PBXBuildFile; productRef = C962265C274395BA00D445C3 /* macOS */; };
+		C9E8D2A6274E292A001F7357 /* AlgorithmTech in Frameworks */ = {isa = PBXBuildFile; productRef = C9E8D2A5274E292A001F7357 /* AlgorithmTech */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -38,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9E8D2A6274E292A001F7357 /* AlgorithmTech in Frameworks */,
 				C962265D274395BA00D445C3 /* macOS in Frameworks */,
 				C9622659274390A500D445C3 /* ThreadTech in Frameworks */,
 				C962265627438F2A00D445C3 /* CocoaLumberjackSwift in Frameworks */,
@@ -109,6 +111,7 @@
 				C962265527438F2A00D445C3 /* CocoaLumberjackSwift */,
 				C9622658274390A500D445C3 /* ThreadTech */,
 				C962265C274395BA00D445C3 /* macOS */,
+				C9E8D2A5274E292A001F7357 /* AlgorithmTech */,
 			);
 			productName = InterviewTech;
 			productReference = C962264027438D6D00D445C3 /* InterviewTech */;
@@ -343,6 +346,10 @@
 		C962265C274395BA00D445C3 /* macOS */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = macOS;
+		};
+		C9E8D2A5274E292A001F7357 /* AlgorithmTech */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AlgorithmTech;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

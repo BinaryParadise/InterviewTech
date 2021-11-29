@@ -52,7 +52,7 @@ public class ThreadTech {
         GCD.GroupTech.exec()
     }
     
-    public class func runTest() {
+    public class func runTest() {        
         NSOperationTech().exec()
     }
 }
