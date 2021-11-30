@@ -1,6 +1,6 @@
 # In-App Purchase
 
-苹果应用内购买俗称内购
+苹果应用内购买俗称`内购`
 
 ## 主要流程
 
@@ -50,6 +50,8 @@ extension [Class]: SKPaymentTransactionObserver {
 
 
 ## 消耗型
+
+单次购买，需要处理漏单流程
 
 ## 自动续订周期
 
