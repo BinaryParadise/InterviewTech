@@ -8,10 +8,10 @@
 
 ## 高级<a href="advanced" id="advanced"></a>
 
-* [动画](animation.md)
-* [IAP](IAP.md)
+* [动画](advanced/animation.md)
+* [IAP](advanced/IAP.md)
 * [WKWebView](advanced/WKWebView.md)
-* [JavaScriptCore](javascriptcore.md)
+* [JavaScriptCore](advanced/javascriptcore.md)
 
 ## 性能<a href="performance" id="performance"></a>
 
