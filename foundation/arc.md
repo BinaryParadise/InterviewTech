@@ -18,7 +18,7 @@ retain主要是MRC中使用，和strong等价，修饰`block`时有些许不同
 
 > weak是弱引用，用weak描述修饰或者所引用对象的计数器不会加一，并且会在引用的对象被释放的时候自动被设置为nil，避免了野指针访问引起崩溃，另外weak还可以用于解决循环引用。
 >
-> [[引用]](https://www.jianshu.com/p/1b566137b3fe)
+> [iOS底层原理：weak的实现原理](https://juejin.cn/post/6844904101839372295)
 
 ### 实现原理
 
