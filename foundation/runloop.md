@@ -27,12 +27,12 @@ Timer Source
 
 Runloop 通过监控 Source 来决定有没有任务要做，除此之外，我们还可以用 Runloop Observer 来监控 Runloop 本身的状态。 Runloop Observer 可以监控下面的 runloop 事件：
 
-- The entrance to the run loop.
-- When the run loop is about to process a timer.
-- When the run loop is about to process an input source.
-- When the run loop is about to go to sleep.
-- When the run loop has woken up, but before it has processed the event that woke it up.
-- The exit from the run loop.
+- 进入.
+- 处理定时器.
+- 处理输入源.
+- 睡眠.
+- 被唤醒处理事件之前.
+- 退出.
 
 ### Runloop Mode
 

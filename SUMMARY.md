@@ -10,9 +10,11 @@
 * [RunLoop](foundation/runloop.md)
 * [网络](foundation/network.md)
 * [TLS](https://github.com/BinaryParadise/PracticeTLS)
+* [Swift](foundation/swift.md)
 
 ## 高级<a href="advanced" id="advanced"></a>
 
+* [编译原理](https://juejin.cn/post/6844904197045878791)
 * [动画](advanced/animation.md)
 * [IAP](advanced/IAP.md)
 * [WKWebView](advanced/WKWebView.md)
