@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  PerformanceViewController.swift
 //  InterviewUI
 //
 //  Created by Rake Yang on 2021/11/29.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class PerformanceViewController: UIViewController {
 
     var ping: ThreadPing?
     

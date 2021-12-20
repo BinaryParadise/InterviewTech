@@ -8,20 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		C9A49F1E2754AA940055AFEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A49F1D2754AA940055AFEF /* AppDelegate.swift */; };
-		C9A49F202754AA940055AFEF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A49F1F2754AA940055AFEF /* SceneDelegate.swift */; };
-		C9A49F222754AA940055AFEF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A49F212754AA940055AFEF /* ViewController.swift */; };
+		C9A49F222754AA940055AFEF /* PerformanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A49F212754AA940055AFEF /* PerformanceViewController.swift */; };
 		C9A49F252754AA940055AFEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9A49F232754AA940055AFEF /* Main.storyboard */; };
 		C9A49F272754AA950055AFEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9A49F262754AA950055AFEF /* Assets.xcassets */; };
 		C9A49F2A2754AA960055AFEF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9A49F282754AA960055AFEF /* LaunchScreen.storyboard */; };
 		C9A49F392754AD1F0055AFEF /* ThreadPing.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A49F382754AD1F0055AFEF /* ThreadPing.swift */; };
 		C9A49F452754C3DF0055AFEF /* BSBacktraceLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A49F442754C3DF0055AFEF /* BSBacktraceLogger.m */; };
+		C9C3558327701D5200C6C01A /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = C9C3558227701D5200C6C01A /* SnapKit */; };
+		C9C3558627701EA900C6C01A /* ResponderGestureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C3558527701EA900C6C01A /* ResponderGestureViewController.swift */; };
+		C9C355882770274E00C6C01A /* HitTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C355872770274E00C6C01A /* HitTestView.swift */; };
+		C9F5095E276987B500B0DE45 /* ConcurrentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F5095D276987B500B0DE45 /* ConcurrentTableViewController.swift */; };
+		C9F509612769881200B0DE45 /* MsgTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F509602769881200B0DE45 /* MsgTextCell.swift */; };
+		C9F5096827698C0000B0DE45 /* SwifterSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C9F5096727698C0000B0DE45 /* SwifterSwift */; };
+		C9F5096D2769979800B0DE45 /* MsgBaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F5096C2769979800B0DE45 /* MsgBaseCell.swift */; };
+		C9F5096F276ADCFC00B0DE45 /* MsgBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F5096E276ADCFC00B0DE45 /* MsgBase.swift */; };
+		C9F50971276ADD3100B0DE45 /* MsgText.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F50970276ADD3100B0DE45 /* MsgText.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C9A49F1A2754AA940055AFEF /* InterviewUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InterviewUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9A49F1D2754AA940055AFEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C9A49F1F2754AA940055AFEF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C9A49F212754AA940055AFEF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C9A49F212754AA940055AFEF /* PerformanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerformanceViewController.swift; sourceTree = "<group>"; };
 		C9A49F242754AA940055AFEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C9A49F262754AA950055AFEF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C9A49F292754AA960055AFEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -30,6 +37,15 @@
 		C9A49F3C2754C1810055AFEF /* InterviewUI-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "InterviewUI-Bridging-Header.h"; sourceTree = "<group>"; };
 		C9A49F432754C3DF0055AFEF /* BSBacktraceLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSBacktraceLogger.h; sourceTree = "<group>"; };
 		C9A49F442754C3DF0055AFEF /* BSBacktraceLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSBacktraceLogger.m; sourceTree = "<group>"; };
+		C9C3558527701EA900C6C01A /* ResponderGestureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponderGestureViewController.swift; sourceTree = "<group>"; };
+		C9C355872770274E00C6C01A /* HitTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HitTestView.swift; sourceTree = "<group>"; };
+		C9F5095D276987B500B0DE45 /* ConcurrentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcurrentTableViewController.swift; sourceTree = "<group>"; };
+		C9F509602769881200B0DE45 /* MsgTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MsgTextCell.swift; sourceTree = "<group>"; };
+		C9F5096C2769979800B0DE45 /* MsgBaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MsgBaseCell.swift; sourceTree = "<group>"; };
+		C9F5096E276ADCFC00B0DE45 /* MsgBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MsgBase.swift; sourceTree = "<group>"; };
+		C9F50970276ADD3100B0DE45 /* MsgText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MsgText.swift; sourceTree = "<group>"; };
+		C9F50BF1276AE9F800B0DE45 /* Canary */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Canary; path = ../../../Canary; sourceTree = "<group>"; };
+		C9F50BF2276AEA1E00B0DE45 /* Canary */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Canary; path = ../../../Canary; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +53,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9F5096827698C0000B0DE45 /* SwifterSwift in Frameworks */,
+				C9C3558327701D5200C6C01A /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +64,7 @@
 		C9A49F112754AA940055AFEF = {
 			isa = PBXGroup;
 			children = (
+				C9F50BF0276AE9F800B0DE45 /* Packages */,
 				C9A49F1C2754AA940055AFEF /* InterviewUI */,
 				C9A49F1B2754AA940055AFEF /* Products */,
 			);
@@ -63,8 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				C9A49F1D2754AA940055AFEF /* AppDelegate.swift */,
-				C9A49F1F2754AA940055AFEF /* SceneDelegate.swift */,
-				C9A49F212754AA940055AFEF /* ViewController.swift */,
+				C9A49F212754AA940055AFEF /* PerformanceViewController.swift */,
 				C9A49F232754AA940055AFEF /* Main.storyboard */,
 				C9A49F262754AA950055AFEF /* Assets.xcassets */,
 				C9A49F282754AA960055AFEF /* LaunchScreen.storyboard */,
@@ -73,8 +91,40 @@
 				C9A49F432754C3DF0055AFEF /* BSBacktraceLogger.h */,
 				C9A49F442754C3DF0055AFEF /* BSBacktraceLogger.m */,
 				C9A49F3C2754C1810055AFEF /* InterviewUI-Bridging-Header.h */,
+				C9C3558427701E8600C6C01A /* ResponderGesture */,
+				C9F5095F276987E300B0DE45 /* UITableView */,
 			);
 			path = InterviewUI;
+			sourceTree = "<group>";
+		};
+		C9C3558427701E8600C6C01A /* ResponderGesture */ = {
+			isa = PBXGroup;
+			children = (
+				C9C3558527701EA900C6C01A /* ResponderGestureViewController.swift */,
+				C9C355872770274E00C6C01A /* HitTestView.swift */,
+			);
+			path = ResponderGesture;
+			sourceTree = "<group>";
+		};
+		C9F5095F276987E300B0DE45 /* UITableView */ = {
+			isa = PBXGroup;
+			children = (
+				C9F5095D276987B500B0DE45 /* ConcurrentTableViewController.swift */,
+				C9F509602769881200B0DE45 /* MsgTextCell.swift */,
+				C9F5096C2769979800B0DE45 /* MsgBaseCell.swift */,
+				C9F5096E276ADCFC00B0DE45 /* MsgBase.swift */,
+				C9F50970276ADD3100B0DE45 /* MsgText.swift */,
+			);
+			path = UITableView;
+			sourceTree = "<group>";
+		};
+		C9F50BF0276AE9F800B0DE45 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				C9F50BF1276AE9F800B0DE45 /* Canary */,
+				C9F50BF2276AEA1E00B0DE45 /* Canary */,
+			);
+			name = Packages;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -93,6 +143,10 @@
 			dependencies = (
 			);
 			name = InterviewUI;
+			packageProductDependencies = (
+				C9F5096727698C0000B0DE45 /* SwifterSwift */,
+				C9C3558227701D5200C6C01A /* SnapKit */,
+			);
 			productName = InterviewUI;
 			productReference = C9A49F1A2754AA940055AFEF /* InterviewUI.app */;
 			productType = "com.apple.product-type.application";
@@ -122,6 +176,10 @@
 				Base,
 			);
 			mainGroup = C9A49F112754AA940055AFEF;
+			packageReferences = (
+				C9F5096627698C0000B0DE45 /* XCRemoteSwiftPackageReference "SwifterSwift" */,
+				C9C3558127701D5200C6C01A /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = C9A49F1B2754AA940055AFEF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -149,11 +207,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9A49F222754AA940055AFEF /* ViewController.swift in Sources */,
+				C9F5095E276987B500B0DE45 /* ConcurrentTableViewController.swift in Sources */,
+				C9A49F222754AA940055AFEF /* PerformanceViewController.swift in Sources */,
+				C9F5096F276ADCFC00B0DE45 /* MsgBase.swift in Sources */,
 				C9A49F392754AD1F0055AFEF /* ThreadPing.swift in Sources */,
+				C9C355882770274E00C6C01A /* HitTestView.swift in Sources */,
+				C9F509612769881200B0DE45 /* MsgTextCell.swift in Sources */,
+				C9F50971276ADD3100B0DE45 /* MsgText.swift in Sources */,
 				C9A49F1E2754AA940055AFEF /* AppDelegate.swift in Sources */,
-				C9A49F202754AA940055AFEF /* SceneDelegate.swift in Sources */,
+				C9F5096D2769979800B0DE45 /* MsgBaseCell.swift in Sources */,
 				C9A49F452754C3DF0055AFEF /* BSBacktraceLogger.m in Sources */,
+				C9C3558627701EA900C6C01A /* ResponderGestureViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,7 +294,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -285,7 +349,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -376,6 +440,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C9C3558127701D5200C6C01A /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		C9F5096627698C0000B0DE45 /* XCRemoteSwiftPackageReference "SwifterSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwifterSwift/SwifterSwift.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 5.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C9C3558227701D5200C6C01A /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C9C3558127701D5200C6C01A /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		C9F5096727698C0000B0DE45 /* SwifterSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C9F5096627698C0000B0DE45 /* XCRemoteSwiftPackageReference "SwifterSwift" */;
+			productName = SwifterSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C9A49F122754AA940055AFEF /* Project object */;
 }
