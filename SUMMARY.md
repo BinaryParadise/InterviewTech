@@ -8,7 +8,7 @@
 * [多线程](foundation/thread.md)
 * [Block](foundation/block.md)
 * [RunLoop](foundation/runloop.md)
-* [事件响应链&传递链&手势](foundation/responder.md)
+* [响应链&手势](foundation/responder.md)
 * [网络](foundation/network.md)
 * [TLS](https://github.com/BinaryParadise/PracticeTLS)
 * [Swift](foundation/swift.md)
