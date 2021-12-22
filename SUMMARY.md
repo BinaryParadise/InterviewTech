@@ -21,6 +21,7 @@
 * [WKWebView](advanced/WKWebView.md)
 * [JavaScriptCore](advanced/javascriptcore.md)
 * [sqlite3](advanced/sqlite3.md)
+* [常见问题](advanced/faq.md)
 
 ## 性能<a href="performance" id="performance"></a>
 
@@ -30,9 +31,7 @@
 
 * [Reveal（UI调试神器）](https://revealapp.com)
 
-## [常见问题解决方案](faq.md)
-
-## [跨平台开发（恶心，不推荐）](#)
+## [跨平台开发（迫不得已）](#advanced/flutter.md)
 
 ## TODO
 

@@ -17,6 +17,8 @@
 		C9BE151427731E9F005058C8 /* InterviewIM in Frameworks */ = {isa = PBXBuildFile; productRef = C9BE151327731E9F005058C8 /* InterviewIM */; };
 		C9C3558627701EA900C6C01A /* ResponderGestureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C3558527701EA900C6C01A /* ResponderGestureViewController.swift */; };
 		C9C355882770274E00C6C01A /* HitTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C355872770274E00C6C01A /* HitTestView.swift */; };
+		C9D1C62327757FD0009A12E2 /* CanaryCore in Frameworks */ = {isa = PBXBuildFile; productRef = C9D1C62227757FD0009A12E2 /* CanaryCore */; };
+		C9D1C62627759578009A12E2 /* InterviewBase in Frameworks */ = {isa = PBXBuildFile; productRef = C9D1C62527759578009A12E2 /* InterviewBase */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,9 @@
 		C9BE151227731B26005058C8 /* InterviewIM */ = {isa = PBXFileReference; lastKnownFileType = folder; name = InterviewIM; path = ../InterviewIM; sourceTree = "<group>"; };
 		C9C3558527701EA900C6C01A /* ResponderGestureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponderGestureViewController.swift; sourceTree = "<group>"; };
 		C9C355872770274E00C6C01A /* HitTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HitTestView.swift; sourceTree = "<group>"; };
+		C9D1C61C277571B0009A12E2 /* Canary */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Canary; path = ../../../Canary; sourceTree = "<group>"; };
+		C9D1C62427759519009A12E2 /* InterviewBase */ = {isa = PBXFileReference; lastKnownFileType = folder; name = InterviewBase; path = ../InterviewBase; sourceTree = "<group>"; };
+		C9D1C62727759AC6009A12E2 /* InterviewUIComponent */ = {isa = PBXFileReference; lastKnownFileType = folder; name = InterviewUIComponent; path = ../InterviewUIComponent; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +47,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9BE151427731E9F005058C8 /* InterviewIM in Frameworks */,
+				C9D1C62627759578009A12E2 /* InterviewBase in Frameworks */,
+				C9D1C62327757FD0009A12E2 /* CanaryCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +102,9 @@
 			isa = PBXGroup;
 			children = (
 				C9BE151227731B26005058C8 /* InterviewIM */,
+				C9D1C61C277571B0009A12E2 /* Canary */,
+				C9D1C62427759519009A12E2 /* InterviewBase */,
+				C9D1C62727759AC6009A12E2 /* InterviewUIComponent */,
 			);
 			name = Packages;
 			sourceTree = "<group>";
@@ -126,6 +136,8 @@
 			name = InterviewUI;
 			packageProductDependencies = (
 				C9BE151327731E9F005058C8 /* InterviewIM */,
+				C9D1C62227757FD0009A12E2 /* CanaryCore */,
+				C9D1C62527759578009A12E2 /* InterviewBase */,
 			);
 			productName = InterviewUI;
 			productReference = C9A49F1A2754AA940055AFEF /* InterviewUI.app */;
@@ -457,6 +469,14 @@
 		C9BE151327731E9F005058C8 /* InterviewIM */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = InterviewIM;
+		};
+		C9D1C62227757FD0009A12E2 /* CanaryCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CanaryCore;
+		};
+		C9D1C62527759578009A12E2 /* InterviewBase */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = InterviewBase;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

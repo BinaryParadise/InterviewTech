@@ -3,7 +3,7 @@ import CocoaLumberjackSwift
 import CoreFoundation
 import ThreadTech
 import AlgorithmTech
-import Proto
+import CanaryProto
 
 class InterviewTech: NSObject {
     
@@ -31,19 +31,5 @@ class InterviewTech: NSObject {
     func waitForExit() {
         DDLogInfo("Hello,World!")
         CFRunLoopRun()
-    }
-}
-
-class LogFormat: NSObject, DDLogFormatter {
-    func format(message logMessage: DDLogMessage) -> String? {
-        let fmt = DateFormatter()
-        fmt.dateFormat = "MM-dd HH:mm:ss.SSS"
-        return "\(fmt.string(from: logMessage.timestamp)) \(#function)+\(#line) \(logMessage.message)"
-    }
-}
-
-@objc class CanaryTTYLogger: DDAbstractLogger {
-    public override func log(message logMessage: DDLogMessage) {
-        CanaryManager.shared.storeLogMessage(dict: logMessage.dictionaryWithValues(forKeys: CanaryManager.StoreLogKeys), timestamp: logMessage.timestamp.timeIntervalSince1970)
     }
 }

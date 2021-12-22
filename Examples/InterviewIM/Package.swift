@@ -16,10 +16,12 @@ let package = Package(
         // Dependencies declare other packages that this package depends on.
         // .package(url: /* package url */, from: "1.0.0"),
         .package(name: "InterviewBase", path: "../InterviewBase"),
+        .package(name: "InterviewUIComponent", path: "../InterviewUIComponent"),
         .package(url: "https://github.com/SwifterSwift/SwifterSwift.git", .upToNextMinor(from: "5.1.0")),
         .package(url: "https://github.com/CocoaLumberjack/CocoaLumberjack.git", .upToNextMinor(from: "3.7.0")),
         .package(url: "https://github.com/SnapKit/SnapKit.git", .upToNextMinor(from: "5.0.0")),
         .package(url: "https://github.com/ccgus/fmdb.git", .upToNextMinor(from: "2.7.0")),
+        .package(url: "https://github.com/CoderMJLee/MJRefresh.git", .upToNextMinor(from: "3.7.0")),
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
@@ -29,7 +31,11 @@ let package = Package(
             dependencies: [.product(name: "FMDB", package: "fmdb"),
                            "SnapKit",
                            "SwifterSwift",
-                           .product(name: "CocoaLumberjackSwift", package: "CocoaLumberjack")]),
+                           "InterviewUIComponent",
+                           "MJRefresh",
+                           .product(name: "CocoaLumberjackSwift", package: "CocoaLumberjack")],
+            resources: [.process("smsCorpus_zh_2015.03.09.json")]
+        ),
         .testTarget(
             name: "InterviewIMTests",
             dependencies: ["InterviewIM"]),

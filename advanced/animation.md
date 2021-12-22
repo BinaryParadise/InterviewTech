@@ -15,3 +15,44 @@
 - duration 动画时间
 - repeatCount 重复次数
 - autoreverses 自动反转动画，如一个动画是从A到B，这个为true时，会接着执行从B再到A的动画。
+
+
+
+## AutoAayout
+
+- 使用updateConstraints的检索条件`LayoutConstraint.swift`
+
+  ```swift
+  // SnapKit 
+  internal func ==(lhs: LayoutConstraint, rhs: LayoutConstraint) -> Bool {
+      guard lhs.firstItem === rhs.firstItem &&
+            lhs.secondItem === rhs.secondItem &&
+            lhs.firstAttribute == rhs.firstAttribute &&
+            lhs.secondAttribute == rhs.secondAttribute &&
+            lhs.relation == rhs.relation &&
+            lhs.priority == rhs.priority &&
+            lhs.multiplier == rhs.multiplier else {
+          return false
+      }
+      return true
+  }
+  ```
+
+- 保存约束，在需要动画时先停用再makeConstraints
+
+  ```swift
+  UIView.animate(withDuration: 0.25) {
+    // 停用约束
+    self.indicatorConstraint.deactivate()
+    // 更新约束
+    self.indicator.snp.makeConstraints { make in
+        self.indicatorConstraint = make.centerX.equalTo(newBtn).constraint
+    }
+    // 布局约束
+    self.indicator.superview?.layoutIfNeeded()
+  }
+  ```
+  
+  
+  
+  

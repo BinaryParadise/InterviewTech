@@ -10,12 +10,16 @@ import FMDB
 import SQLite3
 import CocoaLumberjackSwift
 
+typealias QueryCompletion = ([[AnyHashable : Any]]?) -> Void
+
+let pageSize = 20
+
 class IMDBManager {
     static let shared = IMDBManager()
-    
+    let queue = DispatchQueue(label: "imdb.queue")
     private var dbQueue: FMDatabaseQueue!
     
-    init() {
+    private init() {
         #if targetEnvironment(simulator)
         let dbPath = "\(ProcessInfo.processInfo.environment["SIMULATOR_HOST_HOME"]!)/db"
         #else
@@ -31,6 +35,7 @@ class IMDBManager {
     /// 初始化数据库
     private func setup() {
         dbQueue.inDatabase { db in
+            // 消息表
             db.executeStatements("""
 CREATE TABLE IF NOT EXISTS "Messages" (
   "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
@@ -40,6 +45,18 @@ CREATE TABLE IF NOT EXISTS "Messages" (
   "content" TEXT,
   "timestamp" real NOT NULL ON CONFLICT REPLACE DEFAULT (STRFTIME('%s', 'now')*1000 + SUBSTR(STRFTIME('%f', 'now'), 4))
 );
+""")
+            // FTS4(content,id)
+            db.executeStatements("CREATE VIRTUAL TABLE IF NOT EXISTS MessageFTS4 USING fts4(content TEXT, mid integer);")
+            
+            // 消息新增触发器
+            db.executeStatements("""
+CREATE TRIGGER IF NOT EXISTS "trigger_message_content"
+AFTER INSERT
+ON Messages
+BEGIN
+INSERT INTO MessageFTS4(content, mid) VALUES(new.content, new.id);
+END;
 """)
         }
         
@@ -73,16 +90,18 @@ CREATE TABLE IF NOT EXISTS "Messages" (
         return c
     }
     
-    func query(pageNum: Int = 1) -> [[AnyHashable : Any]] {
-        var results: [[AnyHashable : Any]] = []
-        dbQueue.inDatabase { db in
-            guard let rs = try? db.executeQuery("SELECT * FROM Messages limit ?, ?", values: [(pageNum - 1) * 20, pageNum * 20]) else { return }
-            while rs.next() {
-                if let dict = rs.resultDictionary {
-                    results.append(dict)
+    func query(pageNum: Int = 1, completion: QueryCompletion?) -> Void {
+        queue.async {
+            var results: [[AnyHashable : Any]] = []
+            self.dbQueue.inDatabase { db in
+                guard let rs = try? db.executeQuery("SELECT * FROM Messages limit ?, ?", values: [(pageNum - 1) * pageSize, pageNum * pageSize]) else { return }
+                while rs.next() {
+                    if let dict = rs.resultDictionary {
+                        results.append(dict)
+                    }
                 }
             }
+            completion?(results)
         }
-        return results
     }
 }

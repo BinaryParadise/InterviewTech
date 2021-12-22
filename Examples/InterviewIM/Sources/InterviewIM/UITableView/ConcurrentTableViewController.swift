@@ -9,6 +9,9 @@ import Foundation
 import UIKit
 import SnapKit
 import SwifterSwift
+import CocoaLumberjackSwift
+import InterviewUIComponent
+import MJRefresh
 
 enum GenerateMode {
     case single
@@ -17,7 +20,7 @@ enum GenerateMode {
 }
 
 class ConcurrentTableViewController: UIViewController {
-    let tableView = UITableView(frame: .zero, style: .plain)
+    let tableView = AutomaticUITableView(frame: .zero, style: .plain)
     var msgs: [MsgBase] = []
     
     override func viewDidLoad() {
@@ -48,9 +51,15 @@ class ConcurrentTableViewController: UIViewController {
         }
         
         tableView.register(cellWithClass: MsgTextCell.self)
+        
+        // 下拉刷新
+        tableView.mj_header = RefreshSeamlessHeader(refreshingBlock: {
+            self.fetchData()
+        })
+        
         fetchData()
         
-        let tm = Timer.scheduledTimer(withTimeInterval: 0.05, repeats: true) { t in
+        let tm = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true) { t in
             let c = IMDBManager.shared.count()
             DispatchQueue.main.async {
                 self.title = "\(c)"
@@ -60,14 +69,24 @@ class ConcurrentTableViewController: UIViewController {
         tm.fire()
     }
     
-    func fetchData() {
-        let d = IMDBManager.shared.query(pageNum: 1)
-        if let m = try? JSONDecoder().decode([MsgBase].self, from: JSONSerialization.data(withJSONObject: d, options: .fragmentsAllowed)) {
-            msgs.append(contentsOf: m)
-        }
-        tableView.reloadData()
-        DispatchQueue.main.async {
-            self.scrollBottom()
+    func fetchData(state: RefreshState = .first) {
+        IMDBManager.shared.query(pageNum: 1) { [weak self] r in
+            guard let self = self else { return }
+            if let r = r, let m = try? JSONDecoder().decode([MsgBase].self, from: JSONSerialization.data(withJSONObject: r, options: .fragmentsAllowed)) {
+                self.msgs.append(contentsOf: m)
+                DispatchQueue.main.async { [weak self] in
+                    guard let self = self else { return }
+                    if m.count < pageSize {
+                        self.tableView.mj_header = nil
+                    } else {
+                        self.tableView.mj_header?.endRefreshing()
+                    }
+                    self.tableView.reloadData()
+                    if state == .first {
+                        self.scrollBottom()
+                    }
+                }
+            }
         }
     }
     
@@ -79,8 +98,11 @@ class ConcurrentTableViewController: UIViewController {
         vc.addAction(UIAlertAction(title: "生成消息（批量）", style: .default, handler: { a in
             self.generateTestMessages(mode: .batch)
         }))
-        vc.addAction(UIAlertAction(title: "生成消息（事物）", style: .default, handler: { a in
+        vc.addAction(UIAlertAction(title: "生成消息（事务）", style: .default, handler: { a in
             self.generateTestMessages(mode: .transaction)
+        }))
+        vc.addAction(UIAlertAction(title: "解析对话数据集", style: .default, handler: { a in
+            self.transformTalkXml()
         }))
         vc.addAction(UIAlertAction(title: "取消", style: .cancel, handler: nil))
         navigationController?.present(vc, animated: true, completion: nil)
@@ -133,6 +155,23 @@ class ConcurrentTableViewController: UIViewController {
             print("测试消息生成完成，耗时: \(Date().timeIntervalSince1970 - d.timeIntervalSince1970)")
         }
     }
+    
+    func transformTalkXml() {
+        let bundle = Bundle(path: "\(Bundle(for: MsgBase.self).bundlePath)/InterviewIM_InterviewIM.bundle")
+        if let path = bundle?.path(forResource: "smsCorpus_zh_2015.03.09.json", ofType: nil) {
+            do {
+                let talks = try JSONSerialization.jsonObject(with: Data(contentsOf: URL(fileURLWithPath: path)), options: .fragmentsAllowed) as? [String]
+                IMDBManager.shared.beginTransaction { db in
+                    for item in (talks ?? []).reversed() {
+                        try? db.executeUpdate("INSERT INTO Messages(uid, type, content) Values(\(20210880), 0, \"\(item)\")", values: nil)
+                    }
+                }
+            } catch {
+                print("\(error)")
+            }
+            
+        }
+    }
 }
 
 extension ConcurrentTableViewController: UITableViewDataSource, UITableViewDelegate {
@@ -148,5 +187,11 @@ extension ConcurrentTableViewController: UITableViewDataSource, UITableViewDeleg
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
+    }
+}
+
+extension ConcurrentTableViewController: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        DDLogWarn("contentOffset.y: \(scrollView.contentOffset.y)")
     }
 }

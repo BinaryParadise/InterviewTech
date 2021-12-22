@@ -22,6 +22,8 @@ pragma journal_model=wal;
 
 ## 线程安全
 
+`使用[FMDatabaseQueue inDatabase], 注意不要嵌套使用`
+
 ## 批量插入
 
 | 方式         | 并发线程 | 耗时（秒） | 描述       |
@@ -30,3 +32,4 @@ pragma journal_model=wal;
 | 批量SQL插入  | 6        | 0.36       | 25次x200条 |
 | 事务批量插入 | 6        | 1.99       | 25次x200条 |
 
+## 全文搜索FTS（Full-Text Search)
