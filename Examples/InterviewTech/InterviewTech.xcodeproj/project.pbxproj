@@ -31,7 +31,7 @@
 		C962264027438D6D00D445C3 /* InterviewTech */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = InterviewTech; sourceTree = BUILT_PRODUCTS_DIR; };
 		C962264327438D6D00D445C3 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		C962264F27438E0D00D445C3 /* InterviewTech.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterviewTech.swift; sourceTree = "<group>"; };
-		C962265B2743946000D445C3 /* Canary */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Canary; path = ../../Canary; sourceTree = "<group>"; };
+		C9BE14FE2772C970005058C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +52,8 @@
 		C962263727438D6D00D445C3 = {
 			isa = PBXGroup;
 			children = (
-				C962265A2743946000D445C3 /* Packages */,
+				C9BE150E277319D0005058C8 /* Packages */,
+				C9BE14FE2772C970005058C8 /* Info.plist */,
 				C962264227438D6D00D445C3 /* InterviewTech */,
 				C962264127438D6D00D445C3 /* Products */,
 				C9622657274390A500D445C3 /* Frameworks */,
@@ -83,10 +84,9 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		C962265A2743946000D445C3 /* Packages */ = {
+		C9BE150E277319D0005058C8 /* Packages */ = {
 			isa = PBXGroup;
 			children = (
-				C962265B2743946000D445C3 /* Canary */,
 			);
 			name = Packages;
 			sourceTree = "<group>";
@@ -285,6 +285,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -294,6 +295,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};

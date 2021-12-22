@@ -37,7 +37,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="i2p-Bf-xjf" kind="show" id="lkj-Pu-u3w"/>
+                                            <segue destination="i2p-Bf-xjf" kind="show" id="8ZG-gF-VHo"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="NkY-Ad-cId" style="IBUITableViewCellStyleDefault" id="Vgl-bB-sJx">
@@ -125,7 +125,7 @@
         <!--Concurrent Table View Controller-->
         <scene sceneID="wJq-rn-QTz">
             <objects>
-                <viewController id="i2p-Bf-xjf" customClass="ConcurrentTableViewController" customModule="InterviewUI" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="i2p-Bf-xjf" customClass="ConcurrentTableViewController" customModule="InterviewIM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="a3x-uc-ijo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

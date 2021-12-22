@@ -20,6 +20,7 @@
 * [IAP](advanced/IAP.md)
 * [WKWebView](advanced/WKWebView.md)
 * [JavaScriptCore](advanced/javascriptcore.md)
+* [sqlite3](advanced/sqlite3.md)
 
 ## 性能<a href="performance" id="performance"></a>
 
@@ -28,6 +29,8 @@
 ## 效率提升<a href="efficient" id="efficient"></a>
 
 * [Reveal（UI调试神器）](https://revealapp.com)
+
+## [常见问题解决方案](faq.md)
 
 ## [跨平台开发（恶心，不推荐）](#)
 

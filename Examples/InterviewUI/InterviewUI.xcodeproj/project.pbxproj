@@ -14,15 +14,9 @@
 		C9A49F2A2754AA960055AFEF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9A49F282754AA960055AFEF /* LaunchScreen.storyboard */; };
 		C9A49F392754AD1F0055AFEF /* ThreadPing.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A49F382754AD1F0055AFEF /* ThreadPing.swift */; };
 		C9A49F452754C3DF0055AFEF /* BSBacktraceLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A49F442754C3DF0055AFEF /* BSBacktraceLogger.m */; };
-		C9C3558327701D5200C6C01A /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = C9C3558227701D5200C6C01A /* SnapKit */; };
+		C9BE151427731E9F005058C8 /* InterviewIM in Frameworks */ = {isa = PBXBuildFile; productRef = C9BE151327731E9F005058C8 /* InterviewIM */; };
 		C9C3558627701EA900C6C01A /* ResponderGestureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C3558527701EA900C6C01A /* ResponderGestureViewController.swift */; };
 		C9C355882770274E00C6C01A /* HitTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C355872770274E00C6C01A /* HitTestView.swift */; };
-		C9F5095E276987B500B0DE45 /* ConcurrentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F5095D276987B500B0DE45 /* ConcurrentTableViewController.swift */; };
-		C9F509612769881200B0DE45 /* MsgTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F509602769881200B0DE45 /* MsgTextCell.swift */; };
-		C9F5096827698C0000B0DE45 /* SwifterSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C9F5096727698C0000B0DE45 /* SwifterSwift */; };
-		C9F5096D2769979800B0DE45 /* MsgBaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F5096C2769979800B0DE45 /* MsgBaseCell.swift */; };
-		C9F5096F276ADCFC00B0DE45 /* MsgBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F5096E276ADCFC00B0DE45 /* MsgBase.swift */; };
-		C9F50971276ADD3100B0DE45 /* MsgText.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F50970276ADD3100B0DE45 /* MsgText.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,15 +31,9 @@
 		C9A49F3C2754C1810055AFEF /* InterviewUI-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "InterviewUI-Bridging-Header.h"; sourceTree = "<group>"; };
 		C9A49F432754C3DF0055AFEF /* BSBacktraceLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSBacktraceLogger.h; sourceTree = "<group>"; };
 		C9A49F442754C3DF0055AFEF /* BSBacktraceLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSBacktraceLogger.m; sourceTree = "<group>"; };
+		C9BE151227731B26005058C8 /* InterviewIM */ = {isa = PBXFileReference; lastKnownFileType = folder; name = InterviewIM; path = ../InterviewIM; sourceTree = "<group>"; };
 		C9C3558527701EA900C6C01A /* ResponderGestureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponderGestureViewController.swift; sourceTree = "<group>"; };
 		C9C355872770274E00C6C01A /* HitTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HitTestView.swift; sourceTree = "<group>"; };
-		C9F5095D276987B500B0DE45 /* ConcurrentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcurrentTableViewController.swift; sourceTree = "<group>"; };
-		C9F509602769881200B0DE45 /* MsgTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MsgTextCell.swift; sourceTree = "<group>"; };
-		C9F5096C2769979800B0DE45 /* MsgBaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MsgBaseCell.swift; sourceTree = "<group>"; };
-		C9F5096E276ADCFC00B0DE45 /* MsgBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MsgBase.swift; sourceTree = "<group>"; };
-		C9F50970276ADD3100B0DE45 /* MsgText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MsgText.swift; sourceTree = "<group>"; };
-		C9F50BF1276AE9F800B0DE45 /* Canary */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Canary; path = ../../../Canary; sourceTree = "<group>"; };
-		C9F50BF2276AEA1E00B0DE45 /* Canary */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Canary; path = ../../../Canary; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,8 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9F5096827698C0000B0DE45 /* SwifterSwift in Frameworks */,
-				C9C3558327701D5200C6C01A /* SnapKit in Frameworks */,
+				C9BE151427731E9F005058C8 /* InterviewIM in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,9 +51,10 @@
 		C9A49F112754AA940055AFEF = {
 			isa = PBXGroup;
 			children = (
-				C9F50BF0276AE9F800B0DE45 /* Packages */,
+				C9BE151027731AFB005058C8 /* Packages */,
 				C9A49F1C2754AA940055AFEF /* InterviewUI */,
 				C9A49F1B2754AA940055AFEF /* Products */,
+				C9BE150B27731817005058C8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -92,9 +80,23 @@
 				C9A49F442754C3DF0055AFEF /* BSBacktraceLogger.m */,
 				C9A49F3C2754C1810055AFEF /* InterviewUI-Bridging-Header.h */,
 				C9C3558427701E8600C6C01A /* ResponderGesture */,
-				C9F5095F276987E300B0DE45 /* UITableView */,
 			);
 			path = InterviewUI;
+			sourceTree = "<group>";
+		};
+		C9BE150B27731817005058C8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C9BE151027731AFB005058C8 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				C9BE151227731B26005058C8 /* InterviewIM */,
+			);
+			name = Packages;
 			sourceTree = "<group>";
 		};
 		C9C3558427701E8600C6C01A /* ResponderGesture */ = {
@@ -104,27 +106,6 @@
 				C9C355872770274E00C6C01A /* HitTestView.swift */,
 			);
 			path = ResponderGesture;
-			sourceTree = "<group>";
-		};
-		C9F5095F276987E300B0DE45 /* UITableView */ = {
-			isa = PBXGroup;
-			children = (
-				C9F5095D276987B500B0DE45 /* ConcurrentTableViewController.swift */,
-				C9F509602769881200B0DE45 /* MsgTextCell.swift */,
-				C9F5096C2769979800B0DE45 /* MsgBaseCell.swift */,
-				C9F5096E276ADCFC00B0DE45 /* MsgBase.swift */,
-				C9F50970276ADD3100B0DE45 /* MsgText.swift */,
-			);
-			path = UITableView;
-			sourceTree = "<group>";
-		};
-		C9F50BF0276AE9F800B0DE45 /* Packages */ = {
-			isa = PBXGroup;
-			children = (
-				C9F50BF1276AE9F800B0DE45 /* Canary */,
-				C9F50BF2276AEA1E00B0DE45 /* Canary */,
-			);
-			name = Packages;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,8 +125,7 @@
 			);
 			name = InterviewUI;
 			packageProductDependencies = (
-				C9F5096727698C0000B0DE45 /* SwifterSwift */,
-				C9C3558227701D5200C6C01A /* SnapKit */,
+				C9BE151327731E9F005058C8 /* InterviewIM */,
 			);
 			productName = InterviewUI;
 			productReference = C9A49F1A2754AA940055AFEF /* InterviewUI.app */;
@@ -179,6 +159,8 @@
 			packageReferences = (
 				C9F5096627698C0000B0DE45 /* XCRemoteSwiftPackageReference "SwifterSwift" */,
 				C9C3558127701D5200C6C01A /* XCRemoteSwiftPackageReference "SnapKit" */,
+				C9BE15022772FB02005058C8 /* XCRemoteSwiftPackageReference "fmdb" */,
+				C9BE15082773127D005058C8 /* XCRemoteSwiftPackageReference "CocoaLumberjack" */,
 			);
 			productRefGroup = C9A49F1B2754AA940055AFEF /* Products */;
 			projectDirPath = "";
@@ -207,15 +189,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9F5095E276987B500B0DE45 /* ConcurrentTableViewController.swift in Sources */,
 				C9A49F222754AA940055AFEF /* PerformanceViewController.swift in Sources */,
-				C9F5096F276ADCFC00B0DE45 /* MsgBase.swift in Sources */,
 				C9A49F392754AD1F0055AFEF /* ThreadPing.swift in Sources */,
 				C9C355882770274E00C6C01A /* HitTestView.swift in Sources */,
-				C9F509612769881200B0DE45 /* MsgTextCell.swift in Sources */,
-				C9F50971276ADD3100B0DE45 /* MsgText.swift in Sources */,
 				C9A49F1E2754AA940055AFEF /* AppDelegate.swift in Sources */,
-				C9F5096D2769979800B0DE45 /* MsgBaseCell.swift in Sources */,
 				C9A49F452754C3DF0055AFEF /* BSBacktraceLogger.m in Sources */,
 				C9C3558627701EA900C6C01A /* ResponderGestureViewController.swift in Sources */,
 			);
@@ -442,6 +419,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		C9BE15022772FB02005058C8 /* XCRemoteSwiftPackageReference "fmdb" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ccgus/fmdb.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 2.7.0;
+			};
+		};
+		C9BE15082773127D005058C8 /* XCRemoteSwiftPackageReference "CocoaLumberjack" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/CocoaLumberjack/CocoaLumberjack.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 3.7.0;
+			};
+		};
 		C9C3558127701D5200C6C01A /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
@@ -461,15 +454,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		C9C3558227701D5200C6C01A /* SnapKit */ = {
+		C9BE151327731E9F005058C8 /* InterviewIM */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = C9C3558127701D5200C6C01A /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = SnapKit;
-		};
-		C9F5096727698C0000B0DE45 /* SwifterSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C9F5096627698C0000B0DE45 /* XCRemoteSwiftPackageReference "SwifterSwift" */;
-			productName = SwifterSwift;
+			productName = InterviewIM;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

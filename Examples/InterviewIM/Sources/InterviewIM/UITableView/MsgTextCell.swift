@@ -37,18 +37,18 @@ class MsgTextCell: MsgBaseCell {
     }
     
     override func config(with data: MsgBase?) {
-        guard let data = data as? MsgText else {
+        guard let data = data else {
             return
         }
         
-        msgLabel.text = data.text
+        msgLabel.text = data.content
     }
     
     override class func cellHeight(for data: MsgBase?) -> CGFloat {
-        guard let data = data as? MsgText else {
+        guard let data = data else {
             return 64
         }
-        let r = data.text.nsString.size(withAttributes: [.font: UIFont.systemFont(ofSize: 15)])
+        let r = data.content.nsString.size(withAttributes: [.font: UIFont.systemFont(ofSize: 15)])
         return max(r.height + 24, 64)
     }
 }

@@ -9,6 +9,7 @@ class InterviewTech: NSObject {
     
     public override init() {
         super.init()
+        print("\(Date.serveDate())")
         CanaryManager.shared.baseURL = "http://47.96.176.109"
         CanaryManager.shared.appSecret = "82e439d7968b7c366e24a41d7f53f47d"
         CanaryManager.shared.deviceId = "B65A818A-F4B4-4DC3-AE5A-3C7BA871BD8F"
