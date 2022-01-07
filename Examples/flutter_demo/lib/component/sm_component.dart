@@ -58,7 +58,7 @@ extension FontWidthExtension on TextStyle {
 
 extension WidgetExtension on Widget {
   // 添加背景色
-  Container fillColor(Color color) {
-    return Container(color: color, child: this);
+  Container fillColor(Color color, {double? height}) {
+    return Container(color: color, child: this, height: height,);
   }
 }

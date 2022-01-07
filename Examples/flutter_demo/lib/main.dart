@@ -1,7 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_demo/tabbar_pageview.dart';
+import 'package:flutter_demo/demo/tabbar_pageview.dart';
 import 'package:one_context/one_context.dart';
+
+import 'demo/alignment_demo.dart';
 
 void main() {
   runApp(const MyApp());
@@ -27,6 +29,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
         backgroundColor: const Color(0xFFF2F4F6),
+        scaffoldBackgroundColor: Color(0xFFF2F4F6),
       ),
       home: OneContext()
           .builder(context, const MyHomePage(title: 'Flutter Demo')),
@@ -54,65 +57,58 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
+  List<RouteData> routes = [];
 
-  void _incrementCounter() {
-    setState(() {
-      // This call to setState tells the Flutter framework that something has
-      // changed in this State, which causes it to rerun the build method below
-      // so that the display can reflect the updated values. If we changed
-      // _counter without calling setState(), then the build method would not be
-      // called again, and so nothing would appear to happen.
-      _counter++;
-    });
+  @override
+  void initState() {
+    super.initState();
+    routes.add(RouteData('TabBar+PageView', () => TabbarPageViewPage()));
+    routes.add(RouteData('MainAxisAlignment', () => MainAlignmentDemo()));
+    routes.add(RouteData('CrossAxisAlignment', () => CrossAlignmentDemo()));
   }
 
   @override
   Widget build(BuildContext context) {
-    // This method is rerun every time setState is called, for instance as done
-    // by the _incrementCounter method above.
-    //
-    // The Flutter framework has been optimized to make rerunning build methods
-    // fast, so that you can just rebuild anything that needs updating rather
-    // than having to individually change instances of widgets.
+    Widget current = ListView.separated(
+        padding: EdgeInsets.only(top: 12),
+        itemBuilder: (context, index) {
+          var item = routes[index];
+          return Container(
+            height: 50,
+            color: Colors.white, //若不提供颜色，则整个ListView都是白色
+            child: TextButton(
+                onPressed: () => OneContext().push(
+                    CupertinoPageRoute(builder: (context) => item.child())),
+                child: Text(
+                  item.title,
+                  style: TextStyle(fontSize: 15),
+                )),
+          );
+        },
+        separatorBuilder: (context, index) => Divider(
+              height: 8,
+              color: Color(0xFFF2F4F6),
+            ),
+        itemCount: routes.length);
+    current = Container(
+      color: Color(0xFFF2F4F6),
+      child: current,
+    );
     return Scaffold(
       appBar: AppBar(
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
       ),
-      body: Center(
-        // Center is a layout widget. It takes a single child and positions it
-        // in the middle of the parent.
-        child: Column(
-          // Column is also a layout widget. It takes a list of children and
-          // arranges them vertically. By default, it sizes itself to fit its
-          // children horizontally, and tries to be as tall as its parent.
-          //
-          // Invoke "debug painting" (press "p" in the console, choose the
-          // "Toggle Debug Paint" action from the Flutter Inspector in Android
-          // Studio, or the "Toggle Debug Paint" command in Visual Studio Code)
-          // to see the wireframe for each widget.
-          //
-          // Column has various properties to control how it sizes itself and
-          // how it positions its children. Here we use mainAxisAlignment to
-          // center the children vertically; the main axis here is the vertical
-          // axis because Columns are vertical (the cross axis would be
-          // horizontal).
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: <Widget>[
-            TextButton(
-                onPressed: () {
-                  OneContext().push(CupertinoPageRoute(
-                      builder: (context) => TabbarPageViewPage()));
-                },
-                child: SizedBox(
-                  height: 35,
-                  child: Text('TabBar+PageView'),
-                ))
-          ],
-        ),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+      body:
+          current, // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
+}
+
+class RouteData {
+  String title;
+  Widget Function() child;
+
+  RouteData(this.title, this.child);
 }
