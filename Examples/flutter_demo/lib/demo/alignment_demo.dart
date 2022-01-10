@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../component/sm_component.dart';
+import '../component/intro_component.dart';
 
 class MainAlignmentDemo extends StatelessWidget {
   const MainAlignmentDemo({Key? key}) : super(key: key);
@@ -15,14 +15,14 @@ class MainAlignmentDemo extends StatelessWidget {
       SizedBox(
         width: 8,
       ),
-      Text('             ').fillColor(Colors.deepPurple.withOpacity(0.5))
+      Text('             ').fill(color: Colors.deepPurple.withOpacity(0.5))
     ]));
 
     mainRows.add(SizedBox(
       height: 20,
     ));
 
-    mainRows.add(Text('MainAxisAlignment: 主轴布局').fillColor(Colors.orange));
+    mainRows.add(Text('MainAxisAlignment: 主轴布局').fill(color: Colors.orange));
 
     mainRows.add(SizedBox(
       height: 20,
@@ -112,7 +112,7 @@ class CrossAlignmentDemo extends StatelessWidget {
       SizedBox(
         width: 8,
       ),
-      Text('             ').fillColor(Colors.deepPurple.withOpacity(0.5))
+      Text('             ').fill(color: Colors.deepPurple.withOpacity(0.5))
     ]));
 
     crossRows.add(SizedBox(
@@ -121,7 +121,7 @@ class CrossAlignmentDemo extends StatelessWidget {
 
     // 以下是副轴
     crossRows
-        .add(Text('CrossAxisAlignment: 副轴布局').fillColor(Colors.deepOrange));
+        .add(Text('CrossAxisAlignment: 副轴布局').fill(color: Colors.deepOrange));
 
     crossRows.add(SizedBox(
       height: 20,
@@ -218,14 +218,14 @@ class _AlignmentRowItem extends StatelessWidget {
               color: Colors.white,
               fontSize: 15,
               fontWeight: FontWeight.w600),
-        ).fillColor(Colors.red),
-        Text(data.center).fillColor(Colors.amber),
+        ).fill(color: Colors.red),
+        Text(data.center).fill(color: Colors.amber),
         Container(
           height: 50,
-          child: Text(data.tail).fillColor(Colors.lightGreen),
+          child: Text(data.tail).fill(color: Colors.lightGreen),
         ),
       ],
     );
-    return current.fillColor(Colors.deepPurple.withOpacity(0.5), height: 50);
+    return current.fill(color: Colors.deepPurple.withOpacity(0.5), height: 50);
   }
 }

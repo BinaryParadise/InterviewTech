@@ -4,7 +4,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-class SMSegment extends StatefulWidget {
+class IntroSegment extends StatefulWidget {
   static const String viewType = 'plugins.flutter.io/nano_platform_view';
   List<SMSegmentItem> datas;
   double height;
@@ -16,7 +16,7 @@ class SMSegment extends StatefulWidget {
       TextStyle(fontSize: 13, color: Color(0xFF222222));
   bool native;
 
-  SMSegment({
+  IntroSegment({
     required this.datas,
     required this.controller,
     Key? key,
@@ -26,49 +26,25 @@ class SMSegment extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  State<SMSegment> createState() => _SMSegmentState();
+  State<IntroSegment> createState() => _IntroSegmentState();
 }
 
-class SegmentController extends ChangeNotifier {
-  MethodChannel? _platform;
+class _IntroSegmentState extends State<IntroSegment> {
+  late int currentIndex;
 
-  SegmentController({int initIndex = 0}) {
-    _currentIndex = initIndex;
-
-    if (defaultTargetPlatform == TargetPlatform.android ||
-        defaultTargetPlatform == TargetPlatform.iOS) {
-      _platform = MethodChannel('com.xincheng.sm.SegmentView');
-      _platform!.setMethodCallHandler(callHandler);
-    }
+  @override
+  initState() {
+    super.initState();
+    currentIndex = widget.controller.currentIndex;
+    widget.controller.addListener(() {
+      if (currentIndex != widget.controller.currentIndex) {
+        setState(() {
+          currentIndex = widget.controller.currentIndex;
+        });
+      }
+    });
   }
 
-  int _currentIndex = 0;
-
-  int get currentIndex => _currentIndex;
-
-  set currentIndex(int index) {
-    _currentIndex = index;
-    notifyListeners();
-  }
-
-  void animateTo(int index) {
-    _currentIndex = index;
-    if (_platform != null) {
-      _platform!.invokeMethod('setCurrentIndex', index).then((value) => null);
-    }
-  }
-
-  Future<dynamic> callHandler(MethodCall call) async {
-    switch (call.method) {
-      case 'setCurrentIndex':
-        currentIndex = call.arguments as int;
-        break;
-    }
-    return true;
-  }
-}
-
-class _SMSegmentState extends State<SMSegment> {
   /// 指示器
   Widget indicator() {
     return Container(
@@ -105,8 +81,8 @@ class _SMSegmentState extends State<SMSegment> {
             child: Text(
               widget.datas[i].title,
               style: selected
-                  ? SMSegment._selectedTitleStyle
-                  : SMSegment._titleStyle,
+                  ? IntroSegment._selectedTitleStyle
+                  : IntroSegment._titleStyle,
             ),
             style: ButtonStyle(
                 shadowColor: MaterialStateProperty.all(Colors.transparent),
@@ -140,10 +116,10 @@ class _SMSegmentState extends State<SMSegment> {
 
   Widget byNative(BuildContext context) {
     if (defaultTargetPlatform == TargetPlatform.android) {
-      return AndroidView(viewType: SMSegment.viewType);
+      return AndroidView(viewType: IntroSegment.viewType);
     } else if (defaultTargetPlatform == TargetPlatform.iOS) {
       return UiKitView(
-        viewType: SMSegment.viewType,
+        viewType: IntroSegment.viewType,
         creationParams: {
           'currentIndex': widget.controller.currentIndex,
           'data': widget.datas.map((e) => e.title).toList()
@@ -166,4 +142,44 @@ class SMSegmentItem<T> {
   T? value;
 
   SMSegmentItem(this.title, {this.value});
+}
+
+class SegmentController extends ChangeNotifier {
+  MethodChannel? _platform;
+
+  SegmentController({int initIndex = 0}) {
+    _currentIndex = initIndex;
+
+    if (defaultTargetPlatform == TargetPlatform.android ||
+        defaultTargetPlatform == TargetPlatform.iOS) {
+      _platform = MethodChannel('com.xincheng.sm.SegmentView');
+      _platform!.setMethodCallHandler(callHandler);
+    }
+  }
+
+  int _currentIndex = 0;
+
+  int get currentIndex => _currentIndex;
+
+  set currentIndex(int index) {
+    _currentIndex = index;
+    notifyListeners();
+  }
+
+  void animateTo(int index) {
+    _currentIndex = index;
+    if (_platform != null) {
+      _platform!.invokeMethod('setCurrentIndex', index).then((value) => null);
+    }
+    notifyListeners();
+  }
+
+  Future<dynamic> callHandler(MethodCall call) async {
+    switch (call.method) {
+      case 'setCurrentIndex':
+        currentIndex = call.arguments as int;
+        break;
+    }
+    return true;
+  }
 }

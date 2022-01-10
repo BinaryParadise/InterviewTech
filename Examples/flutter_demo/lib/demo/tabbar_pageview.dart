@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:one_context/one_context.dart';
 
-import '../component/sm_segment.dart';
+import '../component/intro_segment.dart';
 import 'listview_demo.dart';
 
 class TabbarPageViewPage extends StatelessWidget {
@@ -22,7 +22,7 @@ class TabbarPageViewPage extends StatelessWidget {
 
     Widget current;
     // 标签切换
-    current = SMSegment(
+    current = IntroSegment(
       datas: [
         SMSegmentItem<String>('待处理(5)'),
         SMSegmentItem<String>('已处理(20)')
