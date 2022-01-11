@@ -116,7 +116,8 @@ class _IntroSegmentState extends State<IntroSegment> {
 
   Widget byNative(BuildContext context) {
     if (defaultTargetPlatform == TargetPlatform.android) {
-      return AndroidView(viewType: IntroSegment.viewType);
+      //TODO: 安卓原生实现
+      return byDart(context);
     } else if (defaultTargetPlatform == TargetPlatform.iOS) {
       return UiKitView(
         viewType: IntroSegment.viewType,
@@ -150,8 +151,7 @@ class SegmentController extends ChangeNotifier {
   SegmentController({int initIndex = 0}) {
     _currentIndex = initIndex;
 
-    if (defaultTargetPlatform == TargetPlatform.android ||
-        defaultTargetPlatform == TargetPlatform.iOS) {
+    if (defaultTargetPlatform == TargetPlatform.iOS) {
       _platform = MethodChannel('com.xincheng.sm.SegmentView');
       _platform!.setMethodCallHandler(callHandler);
     }
