@@ -31,7 +31,7 @@
 
 * [Reveal（UI调试神器）](https://revealapp.com)
 
-## [跨平台开发（迫不得已）](#advanced/flutter.md)
+## [flutter（真香）](https://github.com/BinaryParadise/FlutterDemo)
 
 ## TODO
 
