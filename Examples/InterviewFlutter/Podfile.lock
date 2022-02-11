@@ -1,0 +1,67 @@
+PODS:
+  - device_info (0.0.1):
+    - Flutter
+  - Flutter (1.0.0)
+  - flutter_canary (0.0.1):
+    - Flutter
+    - SwiftyJSON
+  - flutter_imploded (0.0.1):
+    - Flutter
+  - FlutterPluginRegistrant (0.0.1):
+    - device_info
+    - Flutter
+    - flutter_canary
+    - fluttertoast
+    - shared_preferences_ios
+  - fluttertoast (0.0.2):
+    - Flutter
+    - Toast
+  - shared_preferences_ios (0.0.1):
+    - Flutter
+  - SwiftyJSON (5.0.1)
+  - Toast (4.0.0)
+
+DEPENDENCIES:
+  - device_info (from `flutter_imploded/.ios/.symlinks/plugins/device_info/ios`)
+  - Flutter (from `flutter_imploded/.ios/Flutter/engine`)
+  - flutter_canary (from `flutter_imploded/.ios/.symlinks/plugins/flutter_canary/ios`)
+  - flutter_imploded (from `flutter_imploded/.ios/Flutter`)
+  - FlutterPluginRegistrant (from `flutter_imploded/.ios/Flutter/FlutterPluginRegistrant`)
+  - fluttertoast (from `flutter_imploded/.ios/.symlinks/plugins/fluttertoast/ios`)
+  - shared_preferences_ios (from `flutter_imploded/.ios/.symlinks/plugins/shared_preferences_ios/ios`)
+
+SPEC REPOS:
+  trunk:
+    - SwiftyJSON
+    - Toast
+
+EXTERNAL SOURCES:
+  device_info:
+    :path: flutter_imploded/.ios/.symlinks/plugins/device_info/ios
+  Flutter:
+    :path: flutter_imploded/.ios/Flutter/engine
+  flutter_canary:
+    :path: flutter_imploded/.ios/.symlinks/plugins/flutter_canary/ios
+  flutter_imploded:
+    :path: flutter_imploded/.ios/Flutter
+  FlutterPluginRegistrant:
+    :path: flutter_imploded/.ios/Flutter/FlutterPluginRegistrant
+  fluttertoast:
+    :path: flutter_imploded/.ios/.symlinks/plugins/fluttertoast/ios
+  shared_preferences_ios:
+    :path: flutter_imploded/.ios/.symlinks/plugins/shared_preferences_ios/ios
+
+SPEC CHECKSUMS:
+  device_info: d7d233b645a32c40dfdc212de5cf646ca482f175
+  Flutter: bdfa2e8fe0e2880a2c6a58a0b1a8675c262a07af
+  flutter_canary: 28853e1e6917043169de460ce08ab0557faa8136
+  flutter_imploded: 86006a34dccc92ddbbb223cd8cd090c7a614f33e
+  FlutterPluginRegistrant: 8b5582f748eea4a0f0ab142df90520dd2731b931
+  fluttertoast: 6122fa75143e992b1d3470f61000f591a798cc58
+  shared_preferences_ios: aef470a42dc4675a1cdd50e3158b42e3d1232b32
+  SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
+  Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
+
+PODFILE CHECKSUM: fbc329826a1b2f0617918446873afc2eb7499d69
+
+COCOAPODS: 1.11.2
