@@ -8,16 +8,22 @@
 import UIKit
 import Flutter
 import FlutterPluginRegistrant
+import flutter_canary
+import CocoaLumberjack
 
 @main
 class AppDelegate: FlutterAppDelegate {
-
+    
     lazy var flutterEngine = FlutterEngine(name: "my flutter engine")
 
     override func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        flutterEngine.run()
-        GeneratedPluginRegistrant.register(with: flutterEngine)
+        //flutterEngine.run()
+        //GeneratedPluginRegistrant.register(with: flutterEngine)
+        
+        DDLog.add(DDTTYLogger.sharedInstance!)
+        DDLog.add(CanaryTTYLogger.shared)
+        
         return super.application(application, didFinishLaunchingWithOptions: launchOptions)
     }
 
@@ -38,3 +44,11 @@ class AppDelegate: FlutterAppDelegate {
 
 }
 
+class CanaryTTYLogger: DDAbstractLogger {
+    static let shared = CanaryTTYLogger()
+    override func log(message logMessage: DDLogMessage) {
+//        #if CANARY_ENABLE
+        SwiftFlutterCanaryPlugin.storeLog(dict: logMessage.dictionaryWithValues(forKeys: StoreLogKeys))
+//        #endif
+    }
+}

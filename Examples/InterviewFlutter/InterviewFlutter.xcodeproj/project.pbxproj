@@ -7,17 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		274633083DF018AA5A506A87 /* Pods_InterviewFlutter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D4DFBCDFF21185B4D3ECF4A /* Pods_InterviewFlutter.framework */; };
 		C910691E27B6598500B37FA2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C910691D27B6598500B37FA2 /* AppDelegate.swift */; };
 		C910692027B6598500B37FA2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C910691F27B6598500B37FA2 /* SceneDelegate.swift */; };
 		C910692227B6598500B37FA2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C910692127B6598500B37FA2 /* ViewController.swift */; };
 		C910692527B6598500B37FA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C910692327B6598500B37FA2 /* Main.storyboard */; };
 		C910692727B6598800B37FA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C910692627B6598800B37FA2 /* Assets.xcassets */; };
 		C910692A27B6598800B37FA2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C910692827B6598800B37FA2 /* LaunchScreen.storyboard */; };
+		E6FC0E205F855D3292041A2B /* Pods_InterviewFlutter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B942C55EC1F0AFD1B68D451 /* Pods_InterviewFlutter.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0D4DFBCDFF21185B4D3ECF4A /* Pods_InterviewFlutter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InterviewFlutter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B942C55EC1F0AFD1B68D451 /* Pods_InterviewFlutter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InterviewFlutter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		55A27E7378777C3084B84155 /* Pods-InterviewFlutter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InterviewFlutter.release.xcconfig"; path = "Target Support Files/Pods-InterviewFlutter/Pods-InterviewFlutter.release.xcconfig"; sourceTree = "<group>"; };
 		9B91A0E21A1A144385F02AA1 /* Pods-InterviewFlutter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InterviewFlutter.debug.xcconfig"; path = "Target Support Files/Pods-InterviewFlutter/Pods-InterviewFlutter.debug.xcconfig"; sourceTree = "<group>"; };
 		C910691A27B6598500B37FA2 /* InterviewFlutter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InterviewFlutter.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -35,7 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				274633083DF018AA5A506A87 /* Pods_InterviewFlutter.framework in Frameworks */,
+				E6FC0E205F855D3292041A2B /* Pods_InterviewFlutter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,7 +86,7 @@
 		F9B9AB1A487EC2FF8D9BDC66 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0D4DFBCDFF21185B4D3ECF4A /* Pods_InterviewFlutter.framework */,
+				0B942C55EC1F0AFD1B68D451 /* Pods_InterviewFlutter.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -169,7 +169,7 @@
 			name = "[CP-User] Run Flutter Build flutter_imploded Script";
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "set -e\nset -u\nsource \"${SRCROOT}/flutter_imploded/.ios/Flutter/flutter_export_environment.sh\"\nexport VERBOSE_SCRIPT_LOGGING=1 && \"$FLUTTER_ROOT\"/packages/flutter_tools/bin/xcode_backend.sh build";
+			shellScript = "set -e\nset -u\nsource \"${SRCROOT}/flutter_imploded/.ios/Flutter/flutter_export_environment.sh\"\nexport VERBOSE_SCRIPT_LOGGING=1 && \"$FLUTTER_ROOT\"/packages/flutter_tools/bin/xcode_backend.sh build\n";
 		};
 		D13B1E7D0911ECF805F211D4 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;

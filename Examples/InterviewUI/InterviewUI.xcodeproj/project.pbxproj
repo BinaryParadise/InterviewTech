@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C91068B827B4ED3800B37FA2 /* CanaryCore in Frameworks */ = {isa = PBXBuildFile; productRef = C91068B727B4ED3800B37FA2 /* CanaryCore */; };
+		C91068BA27B4ED3800B37FA2 /* CanaryiOS in Frameworks */ = {isa = PBXBuildFile; productRef = C91068B927B4ED3800B37FA2 /* CanaryiOS */; };
+		C91068BC27B4EDD700B37FA2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C91068BB27B4EDD700B37FA2 /* UIKit.framework */; };
 		C9A49F1E2754AA940055AFEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A49F1D2754AA940055AFEF /* AppDelegate.swift */; };
 		C9A49F222754AA940055AFEF /* PerformanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A49F212754AA940055AFEF /* PerformanceViewController.swift */; };
 		C9A49F252754AA940055AFEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9A49F232754AA940055AFEF /* Main.storyboard */; };
@@ -17,11 +20,11 @@
 		C9BE151427731E9F005058C8 /* InterviewIM in Frameworks */ = {isa = PBXBuildFile; productRef = C9BE151327731E9F005058C8 /* InterviewIM */; };
 		C9C3558627701EA900C6C01A /* ResponderGestureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C3558527701EA900C6C01A /* ResponderGestureViewController.swift */; };
 		C9C355882770274E00C6C01A /* HitTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C355872770274E00C6C01A /* HitTestView.swift */; };
-		C9D1C62327757FD0009A12E2 /* CanaryCore in Frameworks */ = {isa = PBXBuildFile; productRef = C9D1C62227757FD0009A12E2 /* CanaryCore */; };
 		C9D1C62627759578009A12E2 /* InterviewBase in Frameworks */ = {isa = PBXBuildFile; productRef = C9D1C62527759578009A12E2 /* InterviewBase */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C91068BB27B4EDD700B37FA2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C9A49F1A2754AA940055AFEF /* InterviewUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InterviewUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9A49F1D2754AA940055AFEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C9A49F212754AA940055AFEF /* PerformanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerformanceViewController.swift; sourceTree = "<group>"; };
@@ -36,7 +39,6 @@
 		C9BE151227731B26005058C8 /* InterviewIM */ = {isa = PBXFileReference; lastKnownFileType = folder; name = InterviewIM; path = ../InterviewIM; sourceTree = "<group>"; };
 		C9C3558527701EA900C6C01A /* ResponderGestureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponderGestureViewController.swift; sourceTree = "<group>"; };
 		C9C355872770274E00C6C01A /* HitTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HitTestView.swift; sourceTree = "<group>"; };
-		C9D1C61C277571B0009A12E2 /* Canary */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Canary; path = ../../../Canary; sourceTree = "<group>"; };
 		C9D1C62427759519009A12E2 /* InterviewBase */ = {isa = PBXFileReference; lastKnownFileType = folder; name = InterviewBase; path = ../InterviewBase; sourceTree = "<group>"; };
 		C9D1C62727759AC6009A12E2 /* InterviewUIComponent */ = {isa = PBXFileReference; lastKnownFileType = folder; name = InterviewUIComponent; path = ../InterviewUIComponent; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -47,8 +49,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9BE151427731E9F005058C8 /* InterviewIM in Frameworks */,
+				C91068BA27B4ED3800B37FA2 /* CanaryiOS in Frameworks */,
+				C91068B827B4ED3800B37FA2 /* CanaryCore in Frameworks */,
 				C9D1C62627759578009A12E2 /* InterviewBase in Frameworks */,
-				C9D1C62327757FD0009A12E2 /* CanaryCore in Frameworks */,
+				C91068BC27B4EDD700B37FA2 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +98,7 @@
 		C9BE150B27731817005058C8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C91068BB27B4EDD700B37FA2 /* UIKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -102,7 +107,6 @@
 			isa = PBXGroup;
 			children = (
 				C9BE151227731B26005058C8 /* InterviewIM */,
-				C9D1C61C277571B0009A12E2 /* Canary */,
 				C9D1C62427759519009A12E2 /* InterviewBase */,
 				C9D1C62727759AC6009A12E2 /* InterviewUIComponent */,
 			);
@@ -136,8 +140,9 @@
 			name = InterviewUI;
 			packageProductDependencies = (
 				C9BE151327731E9F005058C8 /* InterviewIM */,
-				C9D1C62227757FD0009A12E2 /* CanaryCore */,
 				C9D1C62527759578009A12E2 /* InterviewBase */,
+				C91068B727B4ED3800B37FA2 /* CanaryCore */,
+				C91068B927B4ED3800B37FA2 /* CanaryiOS */,
 			);
 			productName = InterviewUI;
 			productReference = C9A49F1A2754AA940055AFEF /* InterviewUI.app */;
@@ -173,6 +178,7 @@
 				C9C3558127701D5200C6C01A /* XCRemoteSwiftPackageReference "SnapKit" */,
 				C9BE15022772FB02005058C8 /* XCRemoteSwiftPackageReference "fmdb" */,
 				C9BE15082773127D005058C8 /* XCRemoteSwiftPackageReference "CocoaLumberjack" */,
+				C91068B227B4EC1E00B37FA2 /* XCRemoteSwiftPackageReference "Canary" */,
 			);
 			productRefGroup = C9A49F1B2754AA940055AFEF /* Products */;
 			projectDirPath = "";
@@ -354,8 +360,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9V4T4T8D8H;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = InterviewUI/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -368,8 +376,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.binaryparadise.InterviewUI;
+				PRODUCT_BUNDLE_IDENTIFIER = com.binaryparadise.interview;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "InterviewUI/InterviewUI-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -384,8 +393,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9V4T4T8D8H;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = InterviewUI/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -398,8 +409,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.binaryparadise.InterviewUI;
+				PRODUCT_BUNDLE_IDENTIFIER = com.binaryparadise.interview;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "InterviewUI/InterviewUI-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
@@ -431,6 +443,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		C91068B227B4EC1E00B37FA2 /* XCRemoteSwiftPackageReference "Canary" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/BinaryParadise/Canary.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 0.8.4;
+			};
+		};
 		C9BE15022772FB02005058C8 /* XCRemoteSwiftPackageReference "fmdb" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ccgus/fmdb.git";
@@ -466,13 +486,19 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		C91068B727B4ED3800B37FA2 /* CanaryCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C91068B227B4EC1E00B37FA2 /* XCRemoteSwiftPackageReference "Canary" */;
+			productName = CanaryCore;
+		};
+		C91068B927B4ED3800B37FA2 /* CanaryiOS */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C91068B227B4EC1E00B37FA2 /* XCRemoteSwiftPackageReference "Canary" */;
+			productName = CanaryiOS;
+		};
 		C9BE151327731E9F005058C8 /* InterviewIM */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = InterviewIM;
-		};
-		C9D1C62227757FD0009A12E2 /* CanaryCore */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = CanaryCore;
 		};
 		C9D1C62527759578009A12E2 /* InterviewBase */ = {
 			isa = XCSwiftPackageProductDependency;

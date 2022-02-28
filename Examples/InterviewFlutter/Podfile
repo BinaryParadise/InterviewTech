@@ -8,8 +8,9 @@ target 'InterviewFlutter' do
   # Comment the next line if you don't want to use dynamic frameworks
   install_all_flutter_pods(flutter_application_path)
   
-  use_frameworks!
+   use_frameworks!
 
   # Pods for InterviewFlutter
+  pod 'CocoaLumberjack/Swift'
 
 end

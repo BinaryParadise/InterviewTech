@@ -2,6 +2,15 @@
   "object": {
     "pins": [
       {
+        "package": "Canary",
+        "repositoryURL": "https://github.com/BinaryParadise/Canary.git",
+        "state": {
+          "branch": null,
+          "revision": "d1a9a131bac347f605fed51ff4a2c07bd3af4661",
+          "version": "0.8.4"
+        }
+      },
+      {
         "package": "CocoaLumberjack",
         "repositoryURL": "https://github.com/CocoaLumberjack/CocoaLumberjack.git",
         "state": {
