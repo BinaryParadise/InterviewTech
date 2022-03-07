@@ -15,7 +15,7 @@
 
 ## 高级<a href="advanced" id="advanced"></a>
 
-* [编译原理](https://juejin.cn/post/6844904197045878791)
+* [编译原理](advanced/compile.md)
 * [动画](advanced/animation.md)
 * [IAP](advanced/IAP.md)
 * [WKWebView](advanced/WKWebView.md)

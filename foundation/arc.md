@@ -6,7 +6,7 @@ description: ARC全称Automatic Reference Counting（自动引用计数）内存
 
 ## readwrite、readonly
 
-修饰可读访问，默认为readwrite
+修饰读写访问权限，默认为readwrite
 
 ## assign、retain、strong、copy
 
