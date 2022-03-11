@@ -7,6 +7,8 @@
 * [内存管理](foundation/arc.md)
 * [多线程](foundation/thread.md)
 * [Block](foundation/block.md)
+* [Category](foundation/category.md)
+* [KVO&KVC](foundation/kvo_kvc.md)
 * [RunLoop](foundation/runloop.md)
 * [响应链&手势](foundation/responder.md)
 * [网络](foundation/network.md)
