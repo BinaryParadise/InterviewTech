@@ -20,7 +20,7 @@ class ThreadPing: Thread {
     var didReceived: ((_ info: [String : Any]) -> Void)?
     
     /// App是否激活状态
-    var appInActive: Bool = false
+    var appInActive: Bool = true
     
     /// 堆栈信息
     private var anrInfo: String = ""
@@ -74,8 +74,6 @@ class ThreadPing: Thread {
                 if sema.wait(timeout: .now() + 2) == .timedOut {
                     // 主线程超过两秒不响应即视为卡顿
                     verifyReport();
-                } else {
-                    print("未检测到卡顿")
                 }
             } else {
                 Thread.sleep(forTimeInterval: threshold)

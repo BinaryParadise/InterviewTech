@@ -6,7 +6,9 @@
 //
 
 import UIKit
+import CocoaLumberjack
 
+/// 卡顿检测
 class PerformanceViewController: UIViewController {
 
     var ping: ThreadPing?
@@ -19,21 +21,23 @@ class PerformanceViewController: UIViewController {
         // Do any additional setup after loading the view.
         fmt.dateFormat = "yyyy-MM-dd HH:mm:ss.SSS"
         
-        let timer = Timer.scheduledTimer(withTimeInterval: 0.09, repeats: true) { t in
-            DispatchQueue.main.async {
-                self.timeLabel.text = "\(self.fmt.string(from: Date()))"
-            }
-        }
+        let timer = Timer.scheduledTimer(timeInterval: 0.09, target: self, selector: #selector(onTimer(_:)), userInfo: nil, repeats: true)
         RunLoop.main.add(timer, forMode: .common)
         
-        ping = ThreadPing(threshold: 1.0, receive: { dict in
-            print("\(String(describing: dict["content"]!))")
+        ping = ThreadPing(threshold: 0.5, receive: { dict in
+            DDLogWarn("\(String(describing: dict["content"]!))")
         })
         ping?.start()
-        print("\(#function)")
+    }
+    
+    @IBAction func onTimer(_ sender: Any) {
+        DispatchQueue.main.async {
+            self.timeLabel.text = "\(self.fmt.string(from: Date()))"
+        }
     }
 
     @IBAction func onButton(_ sender: Any) {
+        DDLogInfo("Sleep 3.5s")
         Thread.sleep(forTimeInterval: 3.5)
     }
     

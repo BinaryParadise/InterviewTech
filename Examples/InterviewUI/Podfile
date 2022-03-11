@@ -1,0 +1,24 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '9.0'
+
+if File.exists?('Podfile.lock')
+  `rm Podfile.lock`
+end
+
+target 'InterviewUI' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for InterviewUI
+  sv = `swift package --version`
+  if sv.include?('4.2')
+    pod 'Starscream', '3.0.6'
+    pod 'SwifterSwift', '< 5.0'
+    pod 'SwiftyJSON', '< 4.3'
+    pod 'CocoaLumberjack', '< 3.5.3'
+  else
+    pod 'Canary', :path => '../../../Canary'
+  end
+  pod 'InterviewBase', :path => '../InterviewBase'
+
+end

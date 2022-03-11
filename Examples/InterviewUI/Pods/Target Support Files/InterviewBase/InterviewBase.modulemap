@@ -1,0 +1,6 @@
+framework module InterviewBase {
+  umbrella header "InterviewBase-umbrella.h"
+
+  export *
+  module * { export * }
+}

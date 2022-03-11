@@ -1,0 +1,6 @@
+framework module Pods_InterviewUI {
+  umbrella header "Pods-InterviewUI-umbrella.h"
+
+  export *
+  module * { export * }
+}

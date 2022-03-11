@@ -14,6 +14,7 @@ class Computer {
     }
 }
 
+/// 手势&响应链
 class ResponderGestureViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
