@@ -20,5 +20,6 @@ target 'InterviewUI' do
     pod 'Canary', :path => '../../../Canary'
   end
   pod 'InterviewBase', :path => '../InterviewBase'
+  pod 'SnapKit'
 
 end

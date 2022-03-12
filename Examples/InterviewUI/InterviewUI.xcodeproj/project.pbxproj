@@ -19,6 +19,9 @@
 		C9A49F2A2754AA960055AFEF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9A49F282754AA960055AFEF /* LaunchScreen.storyboard */; };
 		C9A49F392754AD1F0055AFEF /* ThreadPing.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A49F382754AD1F0055AFEF /* ThreadPing.swift */; };
 		C9A49F452754C3DF0055AFEF /* BSBacktraceLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A49F442754C3DF0055AFEF /* BSBacktraceLogger.m */; };
+		C9B08C7727DC50A000ED8273 /* KVOViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B08C7627DC50A000ED8273 /* KVOViewController.swift */; };
+		C9B08C7A27DC5BA000ED8273 /* Yunyun.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B08C7927DC5BA000ED8273 /* Yunyun.m */; };
+		C9B08C7E27DC6F2600ED8273 /* ClassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B08C7D27DC6F2600ED8273 /* ClassViewController.m */; };
 		C9C3558627701EA900C6C01A /* ResponderGestureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C3558527701EA900C6C01A /* ResponderGestureViewController.swift */; };
 		C9C355882770274E00C6C01A /* HitTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C355872770274E00C6C01A /* HitTestView.swift */; };
 /* End PBXBuildFile section */
@@ -41,6 +44,11 @@
 		C9A49F3C2754C1810055AFEF /* InterviewUI-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "InterviewUI-Bridging-Header.h"; sourceTree = "<group>"; };
 		C9A49F432754C3DF0055AFEF /* BSBacktraceLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSBacktraceLogger.h; sourceTree = "<group>"; };
 		C9A49F442754C3DF0055AFEF /* BSBacktraceLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSBacktraceLogger.m; sourceTree = "<group>"; };
+		C9B08C7627DC50A000ED8273 /* KVOViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KVOViewController.swift; sourceTree = "<group>"; };
+		C9B08C7827DC5BA000ED8273 /* Yunyun.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Yunyun.h; sourceTree = "<group>"; };
+		C9B08C7927DC5BA000ED8273 /* Yunyun.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Yunyun.m; sourceTree = "<group>"; };
+		C9B08C7C27DC6F2600ED8273 /* ClassViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClassViewController.h; sourceTree = "<group>"; };
+		C9B08C7D27DC6F2600ED8273 /* ClassViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClassViewController.m; sourceTree = "<group>"; };
 		C9C3558527701EA900C6C01A /* ResponderGestureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponderGestureViewController.swift; sourceTree = "<group>"; };
 		C9C355872770274E00C6C01A /* HitTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HitTestView.swift; sourceTree = "<group>"; };
 		D1A30FB59D22A4D269BED58A /* Pods-InterviewUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InterviewUI.release.xcconfig"; path = "Target Support Files/Pods-InterviewUI/Pods-InterviewUI.release.xcconfig"; sourceTree = "<group>"; };
@@ -120,8 +128,10 @@
 				C95F452B27DB1786000672D0 /* Block */,
 				C9A49F432754C3DF0055AFEF /* BSBacktraceLogger.h */,
 				C9A49F442754C3DF0055AFEF /* BSBacktraceLogger.m */,
+				C9B08C7B27DC6EFB00ED8273 /* ClassStructure */,
 				C9A49F2B2754AA960055AFEF /* Info.plist */,
 				C9A49F3C2754C1810055AFEF /* InterviewUI-Bridging-Header.h */,
+				C9B08C7527DC508C00ED8273 /* KVO&KVC */,
 				C9A49F282754AA960055AFEF /* LaunchScreen.storyboard */,
 				C9A49F232754AA940055AFEF /* Main.storyboard */,
 				C9A49F212754AA940055AFEF /* PerformanceViewController.swift */,
@@ -131,6 +141,25 @@
 				C9A49F382754AD1F0055AFEF /* ThreadPing.swift */,
 			);
 			path = InterviewUI;
+			sourceTree = "<group>";
+		};
+		C9B08C7527DC508C00ED8273 /* KVO&KVC */ = {
+			isa = PBXGroup;
+			children = (
+				C9B08C7627DC50A000ED8273 /* KVOViewController.swift */,
+				C9B08C7827DC5BA000ED8273 /* Yunyun.h */,
+				C9B08C7927DC5BA000ED8273 /* Yunyun.m */,
+			);
+			path = "KVO&KVC";
+			sourceTree = "<group>";
+		};
+		C9B08C7B27DC6EFB00ED8273 /* ClassStructure */ = {
+			isa = PBXGroup;
+			children = (
+				C9B08C7C27DC6F2600ED8273 /* ClassViewController.h */,
+				C9B08C7D27DC6F2600ED8273 /* ClassViewController.m */,
+			);
+			path = ClassStructure;
 			sourceTree = "<group>";
 		};
 		C9BE150B27731817005058C8 /* Frameworks */ = {
@@ -275,12 +304,15 @@
 				C958ECFF27DB38B70096EDB9 /* RunLoopViewController.swift in Sources */,
 				C9A49F222754AA940055AFEF /* PerformanceViewController.swift in Sources */,
 				C9A49F392754AD1F0055AFEF /* ThreadPing.swift in Sources */,
+				C9B08C7727DC50A000ED8273 /* KVOViewController.swift in Sources */,
 				C9C355882770274E00C6C01A /* HitTestView.swift in Sources */,
+				C9B08C7E27DC6F2600ED8273 /* ClassViewController.m in Sources */,
 				C9A49F1E2754AA940055AFEF /* AppDelegate.swift in Sources */,
 				C95F453327DB1DF3000672D0 /* ThreadViewController.swift in Sources */,
 				C95F453027DB189C000672D0 /* BlockViewController.m in Sources */,
 				C9A49F452754C3DF0055AFEF /* BSBacktraceLogger.m in Sources */,
 				C9C3558627701EA900C6C01A /* ResponderGestureViewController.swift in Sources */,
+				C9B08C7A27DC5BA000ED8273 /* Yunyun.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

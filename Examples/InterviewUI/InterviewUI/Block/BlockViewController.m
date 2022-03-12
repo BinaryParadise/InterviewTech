@@ -6,6 +6,7 @@
 //
 
 #import "BlockViewController.h"
+#import "InterviewUI-Swift.h"
 
 typedef void(^Blockify)(NSString *str);
 

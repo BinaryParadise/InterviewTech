@@ -6,6 +6,7 @@ PODS:
     - CocoaLumberjack/Core
   - InterviewBase (0.0.1):
     - CocoaLumberjack/Swift
+  - SnapKit (4.2.0)
   - Starscream (3.0.6)
   - SwifterSwift (4.6.0):
     - SwifterSwift/AppKit (= 4.6.0)
@@ -29,6 +30,7 @@ PODS:
 DEPENDENCIES:
   - CocoaLumberjack (< 3.5.3)
   - InterviewBase (from `../InterviewBase`)
+  - SnapKit
   - Starscream (= 3.0.6)
   - SwifterSwift (< 5.0)
   - SwiftyJSON (< 4.3)
@@ -36,6 +38,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - CocoaLumberjack
+    - SnapKit
     - Starscream
     - SwifterSwift
     - SwiftyJSON
@@ -47,10 +50,11 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   CocoaLumberjack: 118bf4a820efc641f79fa487b75ed928dccfae23
   InterviewBase: 102d88ffa4b573c53f69afcf1ca17e20e91a7e37
+  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
   Starscream: ef3ece99d765eeccb67de105bfa143f929026cf5
   SwifterSwift: 812ffec6f301922f5430e75be3f2939ea3a80024
   SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
 
-PODFILE CHECKSUM: a26a52684de355526b4d649a0f04cca3df998830
+PODFILE CHECKSUM: 5ca945b4d547878c39ea47adfe7d804c03a626fb
 
 COCOAPODS: 1.11.2

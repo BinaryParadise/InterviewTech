@@ -8,7 +8,9 @@
 import Foundation
 import UIKit
 
-class Computer {
+class Computer: NSObject {
+    @objc var label: String?
+    
     func powerOn() {
         print("启动电源")
     }

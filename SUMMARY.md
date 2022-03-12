@@ -4,6 +4,7 @@
 
 ## 基础 <a href="foundation" id="foundation"></a>
 
+* [Class](foundation/class.md)
 * [内存管理](foundation/arc.md)
 * [多线程](foundation/thread.md)
 * [Block](foundation/block.md)
