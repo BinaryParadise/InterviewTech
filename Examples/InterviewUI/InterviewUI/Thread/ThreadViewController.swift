@@ -56,11 +56,9 @@ class ThreadViewController: UITableViewController {
         }
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        
+    func queue(row: Int) -> Void {
         let block: () -> DispatchQueue = {
-            switch indexPath.row {
+            switch row {
             case 0: return DispatchQueue(label: "serial")
             case 1: return DispatchQueue(label: "concurrent", attributes: .concurrent)
             case 2: return DispatchQueue.global()
@@ -97,8 +95,70 @@ class ThreadViewController: UITableViewController {
         }))
         alert.addAction(UIAlertAction(title: "取消", style: .cancel, handler: nil))
         navigationController?.present(alert, animated: false, completion: nil)
-
+    }
+    
+    func _NSThread(row: Int) {
+        // 需要手动管理生命周期
+        let thread = Thread(target: self, selector: #selector(onThread(_:)), object: nil)
+        thread.start()
+    }
+    
+    @IBAction func onThread(_ sender: Any) {
+        DDLogDebug("isMainThread: \(Thread.current.isMainThread)")
+        DDLogDebug("name: \(Thread.current.name)")
+    }
+    
+    func _NSOperation(row: Int) {
+        if row == 0 {
+            let oq = OperationQueue()
+            let op1 = BlockOperation {
+                DDLogInfo("创建订单 -> \(Thread.current)")
+            }
+            
+            let op2 = BlockOperation {
+                DDLogInfo("已签收 -> \(Thread.current)")
+            }
+            
+            let op3 = BlockOperation {
+                DDLogInfo("订单完成 -> \(Thread.current)")
+            }
+            
+            let op4 = BlockOperation {
+                DDLogInfo("已发货 -> \(Thread.current)")
+            }
+            
+            let op5 = BlockOperation {
+                DDLogInfo("配送中 -> \(Thread.current)")
+            }
+            
+            op3.addDependency(op2)
+            op2.addDependency(op5)
+            op5.addDependency(op4)
+            op4.addDependency(op1)
+            
+            oq.addOperation(op1)
+            oq.addOperation(op2)
+            oq.addOperation(op3)
+            oq.addOperation(op4)
+            oq.addOperation(op5)
+        } else if row == 1 {
+            let op1 = BlockOperation {
+                DDLogDebug("单独Operation -> \(Thread.current)")
+            }
+            op1.start()
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
+        
+        if indexPath.section == 0 {
+            queue(row: indexPath.row)
+        } else if indexPath.section == 1 {
+            _NSThread(row: indexPath.row)
+        } else if indexPath.section == 2 {
+            _NSOperation(row: indexPath.row)
+        }
     }
 
 }

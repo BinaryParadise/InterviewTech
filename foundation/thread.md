@@ -52,9 +52,21 @@ coverY: 0
 
 面向对象的线程管理类，需要手动管理它的生命周期
 
+```swift
+let thread = Thread(target: self, selector: #selector(onThread(_:)), object: nil)
+thread.start()
+```
+
 ## NSOperation
 
 `NSOperation`是苹果公司提供的一套完整的多线程解决方案，实际上它是基于`GCD`更高一层的封装，完全面向对象。相对于GCD而言使用更加的简单、代码更具可读性。包括网络请求、图片压缩在内的诸多多线程任务案例都很好的使用了NSOperation。当然NSOperation还需要`NSOperationQueue`这一重要角色配合使用。
+
+```swift
+let op1 = BlockOperation {
+    DDLogDebug("单独Operation -> \(Thread.current)")
+}
+op1.start()
+```
 
 * **NSInvocationOperation**
 * **NSBlockOperation**

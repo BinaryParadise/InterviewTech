@@ -22,6 +22,7 @@
 		C9B08C7727DC50A000ED8273 /* KVOViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B08C7627DC50A000ED8273 /* KVOViewController.swift */; };
 		C9B08C7A27DC5BA000ED8273 /* Yunyun.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B08C7927DC5BA000ED8273 /* Yunyun.m */; };
 		C9B08C7E27DC6F2600ED8273 /* ClassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B08C7D27DC6F2600ED8273 /* ClassViewController.m */; };
+		C9C01D7727DED884000956CC /* NetworkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C01D7627DED884000956CC /* NetworkViewController.swift */; };
 		C9C3558627701EA900C6C01A /* ResponderGestureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C3558527701EA900C6C01A /* ResponderGestureViewController.swift */; };
 		C9C355882770274E00C6C01A /* HitTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C355872770274E00C6C01A /* HitTestView.swift */; };
 /* End PBXBuildFile section */
@@ -49,6 +50,7 @@
 		C9B08C7927DC5BA000ED8273 /* Yunyun.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Yunyun.m; sourceTree = "<group>"; };
 		C9B08C7C27DC6F2600ED8273 /* ClassViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClassViewController.h; sourceTree = "<group>"; };
 		C9B08C7D27DC6F2600ED8273 /* ClassViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClassViewController.m; sourceTree = "<group>"; };
+		C9C01D7627DED884000956CC /* NetworkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkViewController.swift; sourceTree = "<group>"; };
 		C9C3558527701EA900C6C01A /* ResponderGestureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponderGestureViewController.swift; sourceTree = "<group>"; };
 		C9C355872770274E00C6C01A /* HitTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HitTestView.swift; sourceTree = "<group>"; };
 		D1A30FB59D22A4D269BED58A /* Pods-InterviewUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InterviewUI.release.xcconfig"; path = "Target Support Files/Pods-InterviewUI/Pods-InterviewUI.release.xcconfig"; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 				C9B08C7527DC508C00ED8273 /* KVO&KVC */,
 				C9A49F282754AA960055AFEF /* LaunchScreen.storyboard */,
 				C9A49F232754AA940055AFEF /* Main.storyboard */,
+				C9C01D7527DED870000956CC /* Network */,
 				C9A49F212754AA940055AFEF /* PerformanceViewController.swift */,
 				C9C3558427701E8600C6C01A /* ResponderGesture */,
 				C958ECFD27DB38A20096EDB9 /* RunLoop */,
@@ -169,6 +172,14 @@
 				F0540136968D6344FFB691C9 /* Pods_InterviewUI.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C9C01D7527DED870000956CC /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				C9C01D7627DED884000956CC /* NetworkViewController.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		C9C3558427701E8600C6C01A /* ResponderGesture */ = {
@@ -311,6 +322,7 @@
 				C95F453327DB1DF3000672D0 /* ThreadViewController.swift in Sources */,
 				C95F453027DB189C000672D0 /* BlockViewController.m in Sources */,
 				C9A49F452754C3DF0055AFEF /* BSBacktraceLogger.m in Sources */,
+				C9C01D7727DED884000956CC /* NetworkViewController.swift in Sources */,
 				C9C3558627701EA900C6C01A /* ResponderGestureViewController.swift in Sources */,
 				C9B08C7A27DC5BA000ED8273 /* Yunyun.m in Sources */,
 			);
