@@ -34,7 +34,7 @@
 
 * [Reveal（UI调试神器）](https://revealapp.com)
 
-## [flutter（真香）](https://github.com/BinaryParadise/FlutterDemo)
+## [flutter](advanced/flutter.md)
 
 ## TODO
 
